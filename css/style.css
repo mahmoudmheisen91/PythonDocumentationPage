@@ -10,6 +10,7 @@
     --blue: rgb(28, 119, 255);
     --black: rgb(27, 24, 24);
     --white: rgb(247, 247, 247);
+    --gray: rgb(170, 170, 170);
 }
 
 /* Apply a natural box layout model to all elements, 
@@ -29,8 +30,8 @@ body {
     margin: 0;
     padding: 0;
     
-    font-size: 1.3rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.7;
     font-family: var(--main-font);
     
     color: var(--black);
@@ -42,7 +43,7 @@ body {
     display: grid;
     grid-template-columns: 25% 73% 2%;
     grid-template-rows: auto auto auto;
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 /* Header bar */
@@ -52,13 +53,13 @@ body {
 
     border-radius: 10px;
     text-align: center;   
-    font-size: 1.75rem;
-    letter-spacing: 6px;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
     font-family: var(--header-font);
 
     color: var(--black);
     background-color: var(--header-blue);
-    border-bottom: 3px solid var(--black);
+    border-bottom: 2px solid var(--black);
 
     user-select: none;
     -webkit-user-select: none;
@@ -73,14 +74,15 @@ body {
 }
 
 #main-doc header {
-    margin: 30px 0 10px 0;
     color: var(--blue);
-    font-size: 1.8em;
+    font-size: 1.5em;
+    letter-spacing: 4px;
     font-family: var(--header-font);
 }
 
 section {
     border-bottom: 1px solid var(--blue);
+    margin-bottom: 40px;
 }
 
 section article {
@@ -103,7 +105,6 @@ code {
     margin: 10px;
     border-left: 3px solid black;
 
-    /* font-size: 1.75rem; */
     letter-spacing: 2px;
     font-family: var(--code-font);
 }
@@ -112,7 +113,7 @@ code {
     grid-column: 1 / span 1;
     grid-row: 1 / -1;
 
-    background-color: rgb(170, 170, 170);
+    background-color: var(--gray);
 
     position: fixed;
     min-width: 25%;
@@ -153,6 +154,7 @@ code {
 
 #navbar li:hover {
     background-color: var(--header-blue);
+    cursor: pointer;
 }
 
 #navbar a {
@@ -161,7 +163,7 @@ code {
     color: var(--black);
 
     letter-spacing: 2px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     font-family: var(--main-font);
 }
