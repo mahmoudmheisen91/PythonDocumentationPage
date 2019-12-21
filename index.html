@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Meta data-->
+        <meta charset="UTF_8">
+        <meta name="description" content="FCC Project 4">
+        <meta name="author" content="Mahmoud Mheisen">
+        <meta name="keywords" content="python documentation page css fcc">
+        <meta name="viewport" content="width=device-width, 
+                    initial-scale=1.0">
+
+        <!-- Javascript test -->
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+        <!--Font links-->
+
+        
+        <!--CSS links-->
+        <link rel="stylesheet" type="text/CSS" href="css/style.css">
+
+
+        <!--Title-->
+        <title>Python documentation Page</title>
+    </head>
+
+    <body>
+        
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                <p>
+                    Python is an easy to learn, powerful programming language. 
+                    It has efficient high-level data structures and a simple but 
+                    effective approach to object-oriented programming. Python’s 
+                    elegant syntax and dynamic typing, together with its interpreted 
+                    nature, make it an ideal language for scripting and rapid 
+                    application development in many areas on most platforms.
+                </p>
+            
+                <p>
+                    This tutorial does not attempt to be comprehensive and cover 
+                    every single feature, or even every commonly used feature. 
+                    Instead, it introduces many of Python’s most noteworthy features, 
+                    and will give you a good idea of the language’s flavor and style. 
+                    After reading it, you will be able to read and write Python modules 
+                    and programs, and you will be ready to learn more about the various 
+                    Python library modules described in The Python Standard Library.
+                </p>
+
+                <p>
+                    Python enables programs to be written compactly and readably. 
+                    Programs written in Python are typically much shorter than equivalent 
+                    C, C++, or Java programs, for several reasons:
+                    <ul>
+                        <li>
+                            the high-level data types allow you to express complex operations in a single statement;
+                        </li>
+                        <li>
+                            statement grouping is done by indentation instead of beginning and ending brackets;
+                        </li>
+                        <li>
+                            no variable or argument declarations are necessary.
+                        </li>
+                    </ul>
+                </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Prerequests">
+                <header>Prerequests</header>
+                <article>
+                <p>This guide assumes you have the following background:</p>
+            
+                <ul>
+                    <li>
+                        A general understanding of the Internet and computers.
+                    </li>
+                    <li>
+                        Good working knowledge of any IDE.
+                    </li>
+                    <li>
+                        Computer/Laptop or tablet.
+                    </li>
+                    <li>
+                        Some programming experience.
+                    </li>
+                    <li>
+                        Time and Well.
+                    </li>
+                </ul>
+                </article>
+            </section>
+
+            <section class="main-section" id="Hello_world">
+                <header>Hello world</header>
+                <article>
+                <p>
+                    To get started with writing Pyhon, open your IDE and write your
+                    first "Hello world" code:
+                </p>
+                <code>
+                    s = "Hello World"
+                    print(s)
+                </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Variable_declarations">
+                <header>Variable declarations</header>
+                <article>
+                <p>
+                    You can declare a variable in three types:
+                </p>
+                <p>
+                    Number. For example, <code>y = 10</code>.
+                </p>
+                <p>
+                    String. For example, <code>s = "test"</code>.
+                </p>
+                <p>
+                    Lists. For example, <code>squares = [1, 4, 9, 16, 25]</code>.
+                </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="if_statement">
+                <header>if statement</header>
+                <article>
+                <p>
+                    Perhaps the most well-known statement type is the if statement. For example:
+                </p>
+            
+                <code>
+                    if condition: statement_1 else: statement_2
+                </code>
+ 
+                <p>
+                    There can be zero or more elif parts, and the else part is optional. 
+                    The keyword ‘elif’ is short for ‘else if’, and is useful to avoid 
+                    excessive indentation. An if … elif … elif … sequence is a substitute 
+                    for the switch or case statements found in other languages.
+                </p>
+                <code>
+                    >>> x = int(input("Please enter an integer: "))
+                    Please enter an integer: 42
+                    >>> if x < 0:
+                    ...     x = 0
+                    ...     print('Negative changed to zero')
+                    ... elif x == 0:
+                    ...     print('Zero')
+                    ... elif x == 1:
+                    ...     print('Single')
+                    ... else:
+                    ...     print('More')
+                    ...
+                    More
+                </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="for_statement">
+                <header>for statement</header>
+                <article>
+            
+                <p>
+                    The for statement in Python differs a bit from what you may be used 
+                    to in C or Pascal. Rather than always iterating over an arithmetic 
+                    progression of numbers (like in Pascal), or giving the user the 
+                    ability to define both the iteration step and halting condition 
+                    (as C), Python’s for statement iterates over the items of any 
+                    sequence (a list or a string), in the order that they appear in 
+                    the sequence. For example (no pun intended):
+                </p>
+            
+                <code>
+                    >>> # Measure some strings:
+                    ... words = ['cat', 'window', 'defenestrate']
+                    >>> for w in words:
+                    ...     print(w, len(w))
+                    ...
+                    cat 3
+                    window 6
+                    defenestrate 12
+                </code>
+
+                <p>
+                    Code that modifies a collection while iterating over that 
+                    same collection can be tricky to get right. Instead, it is 
+                    usually more straight-forward to loop over a copy of the 
+                    collection or to create a new collection:
+                </p>
+            
+                <code>
+                    # Strategy:  Iterate over a copy
+                    for user, status in users.copy().items():
+                        if status == 'inactive':
+                            del users[user]
+                    
+                    # Strategy:  Create a new collection
+                    active_users = {}
+                    for user, status in users.items():
+                        if status == 'active':
+                            active_users[user] = status
+                </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Function_declarations">
+                <header>Function declarations</header>
+                <article>
+                A function definition (also called a function declaration, or function
+                statement) consists of the def keyword, followed by:
+            
+                <ul>
+                    <li>The name of the function.</li>
+                    <li>
+                    A list of arguments to the function, enclosed in parentheses and
+                    separated by commas.
+                    </li>
+                    <li>
+                    Python (:), enclosed in 4 spaces for each line
+                    </li>
+                </ul>
+                <p>
+                    For example, the following code defines a simple function named sum:
+                </p>
+            
+                <code>
+                    def sum(num1, num2):
+                        return num1 + num2
+                </code>
+                <p>
+                    The function sum takes two argument, called num1 and num2. The function
+                    consists of one statement that says to return the sum of the numbers. The return statement
+                    specifies the value returned by the function.
+                </p>
+                <code>
+                    return num1 + num2
+                </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is taken from
+                        <a href="https://www.python.org/doc/" target="_blank">
+                            Python Documentation
+                        </a>
+                    </li>
+                </ul>
+                </article>
+            </section>
+        </main>
+
+        <nav id="navbar">
+            <header>Python Documentation</header>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#Introduction">Introduction</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Prerequests">Prerequests</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Hello_world">Hello world</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Variable_declarations">Variable declarations</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#if_statement">if statement</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#for_statement">for statement</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Function_declarations">Function declarations</a>
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#Reference">Reference</a>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>
