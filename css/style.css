@@ -41,7 +41,7 @@ body {
 /* Grid Container */
 .container {
     display: grid;
-    grid-template-columns: 25% 73% 2%;
+    grid-template-columns: 25% 70% 5%;
     grid-template-rows: auto auto auto;
     grid-gap: 20px;
 }
@@ -98,7 +98,7 @@ code {
     text-align: left;
     white-space: pre;
     word-break: normal;
-    word-wrap: break-word;
+    word-wrap: normal;
     line-height: 2;
     background-color: #a5ecf7;
     padding: 15px;
@@ -181,14 +181,100 @@ footer p {
 }
 
 /* Media Query */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
     #main-header {   
-        font-size: 1.25rem;
+        font-size: 1.0rem;
+    }
+
+    #main-doc header {
+        font-size: 1.2em;
+    }
+
+    #navbar a {
+        font-size: 1.0rem;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
+    #main-header {   
+        font-size: 0.9rem;
+    }
+
+    #main-doc header {
+        font-size: 1.0em;
+    }
+
+    #navbar a {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 1.0rem;
+    }
+
+    code {
+        font-size: 0.4rem;
+    }
+
     #main-header {   
         font-size: 0.75rem;
     }
+
+    #main-doc header {
+        font-size: 0.8em;
+    }
+
+    #navbar a {
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.75rem;
+    }
+
+    /* Change Grid */
+    .container {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 10px;
+    }
+
+    #navbar ul {
+        border: 1px solid var(--black);
+        height: 200px;
+    }
+
+    #navbar {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+
+        position: absolute;
+
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 270px;
+
+        border-bottom: 2px solid var(--black);
+    }
+
+    #main-header {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+
+        margin-top: 270px;
+    }
+
+    #main-doc {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    footer {
+        grid-column: 2 / span 1;
+        grid-row: 4 / span 1;
+    }
+    
 }
