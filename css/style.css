@@ -40,8 +40,8 @@ body {
 /* Grid Container */
 .container {
     display: grid;
-    grid-template-columns: 25% 70% 5%;
-    grid-template-rows: 150px auto;
+    grid-template-columns: 25% 73% 2%;
+    grid-template-rows: auto auto;
     grid-gap: 10px;
 }
 
@@ -70,6 +70,42 @@ body {
 #main-doc {
     grid-column: 2 / span 1;
     grid-row: 2 / -1;
+}
+
+#main-doc header {
+    margin: 30px 0 10px 0;
+    color: var(--blue);
+    font-size: 1.8em;
+    font-family: var(--header-font);
+}
+
+section {
+    border-bottom: 1px solid var(--blue);
+}
+
+section article {
+    margin: 15px;
+}
+  
+section li {
+    margin: 15px 0px 0px 20px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    word-wrap: break-word;
+    line-height: 2;
+    background-color: #a5ecf7;
+    padding: 15px;
+    margin: 10px;
+    border-left: 3px solid black;
+
+    /* font-size: 1.75rem; */
+    letter-spacing: 2px;
+    font-family: var(--code-font);
 }
 
 #navbar {

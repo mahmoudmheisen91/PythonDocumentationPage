@@ -101,10 +101,11 @@
                     To get started with writing Pyhon, open your IDE and write your
                     first "Hello world" code:
                 </p>
-                <code>
-                    s = "Hello World"
-                    print(s)
-                </code>
+                <code
+                    > >>> s = "Hello World" 
+ >>> print(s)
+ Hello World
+ >>></code>
                 </article>
             </section>
 
@@ -115,13 +116,13 @@
                     You can declare a variable in three types:
                 </p>
                 <p>
-                    Number. For example, <code>y = 10</code>.
+                    Number. For example: <code>>>> y = 10</code>
                 </p>
                 <p>
-                    String. For example, <code>s = "test"</code>.
+                    String. For example: <code>>>> s = "test"</code>
                 </p>
                 <p>
-                    Lists. For example, <code>squares = [1, 4, 9, 16, 25]</code>.
+                    Lists. For example: <code>>>> squares = [1, 4, 9, 16, 25]</code>
                 </p>
                 </article>
             </section>
@@ -133,9 +134,11 @@
                     Perhaps the most well-known statement type is the if statement. For example:
                 </p>
             
-                <code>
-                    if condition: statement_1 else: statement_2
-                </code>
+                <code
+                    > if condition: 
+    statement_1 
+ else: 
+    statement_2</code>
  
                 <p>
                     There can be zero or more elif parts, and the else part is optional. 
@@ -143,21 +146,19 @@
                     excessive indentation. An if … elif … elif … sequence is a substitute 
                     for the switch or case statements found in other languages.
                 </p>
-                <code>
-                    >>> x = int(input("Please enter an integer: "))
-                    Please enter an integer: 42
-                    >>> if x < 0:
-                    ...     x = 0
-                    ...     print('Negative changed to zero')
-                    ... elif x == 0:
-                    ...     print('Zero')
-                    ... elif x == 1:
-                    ...     print('Single')
-                    ... else:
-                    ...     print('More')
-                    ...
-                    More
-                </code>
+                <code
+                    > >>> x = int(input("Please enter an integer: "))
+ Please enter an integer: 42
+ >>> if x < 0:
+     x = 0
+     print('Negative changed to zero')
+ elif x == 0:
+     print('Zero')
+ elif x == 1:
+     print('Single')
+ else:
+     print('More')
+ More</code>
                 </article>
             </section>
 
@@ -175,16 +176,14 @@
                     the sequence. For example (no pun intended):
                 </p>
             
-                <code>
-                    >>> # Measure some strings:
-                    ... words = ['cat', 'window', 'defenestrate']
-                    >>> for w in words:
-                    ...     print(w, len(w))
-                    ...
-                    cat 3
-                    window 6
-                    defenestrate 12
-                </code>
+                <code> >>> # Measure some strings:
+ >>> words = ['cat', 'window', 'defenestrate']
+ >>> for w in words:
+        print(w, len(w))
+
+     cat 3
+     window 6
+     defenestrate 12 </code>
 
                 <p>
                     Code that modifies a collection while iterating over that 
@@ -193,18 +192,16 @@
                     collection or to create a new collection:
                 </p>
             
-                <code>
-                    # Strategy:  Iterate over a copy
-                    for user, status in users.copy().items():
-                        if status == 'inactive':
-                            del users[user]
-                    
-                    # Strategy:  Create a new collection
-                    active_users = {}
-                    for user, status in users.items():
-                        if status == 'active':
-                            active_users[user] = status
-                </code>
+                <code>>>> # Strategy:  Iterate over a copy
+>>> for user, status in users.copy().items():
+    if status == 'inactive':
+        del users[user]
+                                        
+>>> # Strategy:  Create a new collection
+>>> active_users = {}
+>>> for user, status in users.items():
+    if status == 'active':
+        active_users[user] = status</code>
                 </article>
             </section>
 
@@ -228,18 +225,14 @@
                     For example, the following code defines a simple function named sum:
                 </p>
             
-                <code>
-                    def sum(num1, num2):
-                        return num1 + num2
-                </code>
+                <code> >>> def sum(num1, num2):
+        return num1 + num2 </code>
                 <p>
                     The function sum takes two argument, called num1 and num2. The function
                     consists of one statement that says to return the sum of the numbers. The return statement
                     specifies the value returned by the function.
                 </p>
-                <code>
-                    return num1 + num2
-                </code>
+                <code>>>> return num1 + num2 </code>
                 </article>
             </section>
 
@@ -248,9 +241,22 @@
                 <article>
                 <ul>
                     <li>
-                        All the documentation in this page is taken from
+                        Oficial documentation is in this link 
                         <a href="https://www.python.org/doc/" target="_blank">
                             Python Documentation
+                        </a>
+                    </li>
+                    <li>
+                        Python 3 documentation is in this link 
+                        <a href="https://docs.python.org/3/" target="_blank">
+                            Python 3 Documentation
+                        </a>
+                    </li>
+
+                    <li>
+                        Link for good tutorial 
+                        <a href="https://realpython.com/documenting-python-code/" target="_blank">
+                            Real Python
                         </a>
                     </li>
                 </ul>
