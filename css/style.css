@@ -1,0 +1,98 @@
+/* Global Variables */
+:root {
+    /* Fonts */
+    --header-font: 'Bowlby One SC', cursive;
+    --main-font: 'Gothic A1', sans-serif;
+    --code-font: 'Inconsolata', monospace;;
+
+    /* Colors */
+    --header-blue: rgb(4, 196, 255);
+    --blue: rgb(28, 119, 255);
+    --black: rgb(27, 24, 24);
+    --white: rgb(247, 247, 247);
+}
+
+/* Apply a natural box layout model to all elements, 
+but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before, 
+::after {
+    box-sizing: inherit;
+}
+
+/* Setup */
+body {
+    margin: 0;
+    padding: 0;
+    
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-family: var(--main-font);
+    
+    color: var(--black);
+    background-color: var(--white);
+}
+
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-columns: 25% 70% 5%;
+    grid-template-rows: 150px auto;
+    grid-gap: 10px;
+}
+
+/* Header bar */
+#main-header {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+
+    border-radius: 10px;
+    text-align: center;   
+    font-size: 1.75rem;
+    letter-spacing: 6px;
+    font-family: var(--header-font);
+
+    color: var(--black);
+    background-color: var(--header-blue);
+    border-bottom: 3px solid var(--black);
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
+#main-doc {
+    grid-column: 2 / span 1;
+    grid-row: 2 / -1;
+}
+
+#navbar {
+    grid-column: 1 / span 1;
+    grid-row: 1 / -1;
+
+    color: var(--black);
+    background-color: rgb(170, 170, 170);
+
+    border-right: 1px solid black;
+}
+
+
+
+/* Media Query */
+@media only screen and (max-width: 900px) {
+    #main-header {   
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #main-header {   
+        font-size: 0.75rem;
+    }
+}
